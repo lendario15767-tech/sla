@@ -1,0 +1,99 @@
+/* Limpeza e Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.detalhe-body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #e41f26, #b81418);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Container Esticado e Organizado */
+.detalhe-container {
+  background: #8c1115;
+  width: 100%;
+  max-width: 500px; /* Largura máxima maior */
+  padding: 30px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #ffffff; /* Todos os textos brancos */
+}
+
+/* Imagem Responsiva */
+#produtoImagem {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Estilização de Textos */
+#produtoNome { font-size: 24px; font-weight: 700; margin-top: 10px; }
+.produto-preco { font-size: 22px; font-weight: 600; color: #ffffff; }
+.produto-descricao { font-size: 15px; opacity: 0.9; line-height: 1.5; }
+
+.produto-info { text-align: left; margin: 15px 0; }
+.produto-info h4 { margin-bottom: 5px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px; }
+.produto-info p, .produto-info ul { font-size: 14px; margin-bottom: 15px; list-style: none; }
+
+/* Ícone do Carrinho Flutuante */
+.carrinho-float {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  background: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  z-index: 100;
+}
+.carrinho-float i { color: #8c1115; font-size: 24px; }
+#carrinho-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #222;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Formulário e Botões */
+.form-pedido { display: flex; flex-direction: column; gap: 12px; }
+.form-pedido input { padding: 12px; border-radius: 12px; border: none; font-size: 16px; text-align: center; }
+
+.btn-carrinho { 
+  background: #e41f26; 
+  color: white; 
+  padding: 15px; 
+  border: none; 
+  border-radius: 14px; 
+  font-weight: 600; 
+  cursor: pointer; }
+
+.btn-azul { 
+  background: white; 
+  color: #8c1115; 
+  padding: 15px; 
+  border: none; 
+  border-radius: 14px; 
+  font-weight: 700; cursor: pointer; }

@@ -1,0 +1,293 @@
+
+/* ━━━━━━━━━★ CORES ★━━━━━━━━ */
+
+:root {
+  --vermelho: #e51c23;
+  --vermelho-escuro: #c4161b;
+  --azul: #1877f2;
+  --cinza-claro: #f5f5f5;
+  --cinza: #999;
+  --preto: #222;
+}
+
+/* ━━━━━━━━━★ INICIO ★━━━━━━━━ */
+
+.finalizar-body {
+  background: #e51c23;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.finalizar-container {
+  background: white;
+  width: 90%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.resumo {
+  background: #f3f3f3;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.form-finalizar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-finalizar input,
+.form-finalizar select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* ━━━━━━━━━★ BOTÕES ★━━━━━━━━ */
+
+.btn-azul {
+  background: linear-gradient(135deg, #1877f2, #0f5ed7);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-azul:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(24, 119, 242, 0.4);
+}
+
+/* ━━━━━━━━━★ FONTES ★━━━━━━━━ */
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ━━━━━━━━━★ AJUSTES ★━━━━━━━━ */
+
+.finalizar-body {
+  background: #f8f8f8;
+  font-family: 'Poppins', sans-serif;
+}
+
+.finalizar-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lista-carrinho {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item-carrinho {
+  display: grid;
+  grid-template-columns: 60px 1fr 60px 80px;
+  gap: 10px;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.item-carrinho img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item-carrinho .nome {
+  font-weight: 600;
+}
+
+.total-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.form-finalizar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.btn-azul {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-azul:hover {
+  opacity: 0.9;
+}
+
+.pix-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  animation: fadeIn 0.4s ease;
+}
+
+.pix-titulo {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pix-qr {
+  width: 200px;
+  height: 200px;
+  margin: 15px auto;
+}
+
+.pix-valor {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.pix-chave {
+  font-size: 14px;
+  color: #555;
+}
+
+.pix-info {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.cartao-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  animation: fadeIn 0.4s ease;
+}
+
+.cartao-titulo {
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.cartao-linha {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cartao-valor {
+  margin-top: 15px;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+    /* ━━━━━━━━━★INPUTS ANIMADOS  ★━━━━━━━━ */
+
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 12px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  font-size: 15px;
+  outline: none;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+/* ━━━━━━━━━★ LABEL ★━━━━━━━━ */
+
+
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 14px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background: #fff;
+  padding: 0 6px;
+}
+
+/* ━━━━━━━━━★ FOCO ★━━━━━━━━ */
+
+
+.input-group input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ━━━━━━━━━★ LABEL SOBE ★━━━━━━━━ */
+
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 12px;
+  color: #2563eb;
+}
+
+/* ━━━━━━━━━★ ERRO (opcional) ★━━━━━━━━ */
+
+
+.input-group.erro input {
+  border-color: #ef4444;
+}
+
+/* ━━━━━━━━━★ SUCESSO (opcional) ★━━━━━━━━ */
+
+
+.input-group.sucesso input {
+  border-color: #22c55e;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Lunch Aí</title>
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- FORMAS DE FUNDO --> 
+  <div class="bg-shape shape1"></div>
+  <div class="bg-shape shape2"></div>
+  <div class="bg-shape shape3"></div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="principal">
+
+    <section class="lado-form">
+
+      <h1 class="titulo-topo">
+        pronto! agora já pode acessar e fazer seu pedido.
+      </h1>
+
+      <h2 class="titulo-login">
+        já sou cliente Lunch Aí
+        <img src="imgs/pacman.png" alt="Pacman" class="pacman-img">
+      </h2>
+
+      <!-- FORMULÁRIO CORRETO -->
+      <form class="form-box" id="loginForm">
+
+        <label for="email">Username</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="seuemail@exemplo.com"
+          required
+        >
+
+        <label for="senha">Senha</label>
+        <input
+          type="password"
+          id="senha"
+          name="senha"
+          placeholder="********"
+          required
+        >
+
+        <button
+          type="submit"
+          class="btn-acessar"
+          id="btn-acessar"
+        >
+          Acessar
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- JS (ORGANIZADO) -->
+  <script src="script2.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>

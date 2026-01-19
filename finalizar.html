@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <title>Lunch Aí - Finalizar Pedido</title>
+  <link rel="stylesheet" href="style5.css">
+</head>
+
+<body class="finalizar-body">
+
+ <section class="finalizar-container">
+
+  <h2>resumo do pedido</h2>
+
+  <div id="listaCarrinho" class="lista-carrinho"></div>
+
+  <div class="total-box">
+    <span>Total</span>
+    <strong>R$ <span id="totalPedido">0.00</span></strong>
+  </div>
+
+  <form id="finalizarForm" class="form-finalizar">
+
+    <label>Endereço de entrega</label>
+    <input
+      type="text"
+      id="endereco"
+      placeholder="Rua, número, bairro"
+      required
+    >
+
+    <label>Forma de pagamento</label>
+    <select id="pagamento" required>
+      <option value="">Selecione</option>
+      <option value="pix">PIX</option>
+      <option value="cartao">Cartão</option>
+      <option value="dinheiro">Dinheiro</option>
+    </select>
+
+    <div id="pixBox" class="pix-box" style="display: none;">
+  <p class="pix-titulo">Pagamento via PIX</p>
+
+  <img 
+    src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=PIX_LUNCHAI"
+    class="pix-qr"
+  >
+
+  <p class="pix-valor">
+    Valor: <strong>R$ <span id="pixTotal">0.00</span></strong>
+  </p>
+
+  <p class="pix-chave">
+    Chave PIX: <strong>pagamentos@lunchai.com</strong>
+  </p>
+
+  <small class="pix-info">
+    Após o pagamento, seu pedido será confirmado automaticamente.
+  </small>
+</div>
+
+  <div id="cartaoBox" class="cartao-box" style="display: none;">
+
+  <p class="cartao-titulo">Pagamento com cartão</p>
+
+  <div class="input-group">
+    <input id="numeroCartao" placeholder=" " required>
+    <label>Número do cartão</label>
+  </div>
+
+  <div class="input-group">
+    <input id="nomeCartao" placeholder=" " required>
+    <label>Nome do cartão</label>
+  </div>
+
+  <div class="input-group">
+    <input id="validade" placeholder=" " required>
+    <label>Validade</label>
+  </div>
+
+  <div class="input-group">
+    <input id="cvv" placeholder=" " required>
+    <label>CVV</label>
+  </div>
+
+  <p class="cartao-valor">
+    Valor: <strong>R$ <span id="cartaoTotal">0.00</span></strong>
+  </p>
+
+</div>
+
+
+<!-- DINHEIRO -->
+<div id="dinheiroBox" style="display:none;">
+
+  <p>Pagamento em dinheiro</p>
+
+  <label>
+    <input type="checkbox" id="precisaTroco">
+    preciso de troco
+  </label>
+
+  <input 
+    type="number"
+    id="trocoValor"
+    placeholder="Troco para quanto?"
+    style="display:none;"
+    min="1"
+  >
+
+  <p>
+    Total: <strong>R$ <span id="dinheiroTotal">0.00</span></strong>
+  </p>
+
+</div>
+
+
+
+    <button type="submit" class="btn-azul">
+      confirmar pedido
+    </button>
+
+  </form>
+
+</section>
+
+
+  <script src="script5.js"></script>
+</body>
+</html>

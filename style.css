@@ -1,0 +1,224 @@
+
+/* ━━━━━━━━━★ IMPORTS ★━━━━━━━━ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fredoka+One&display=swap');
+
+
+/* ━━━━━━━━━★ VARIÁVEIS ★━━━━━━━━ */
+
+:root {
+  --vermelho: #e51c23;
+  --vermelho-escuro: #b8141a;
+  --azul: #1877f2;
+  --azul-hover: #005ed6;
+  --branco: #ffffff;
+  --cinza-claro: #f5f5f5;
+  --preto: #222;
+}
+
+
+    /* ━━━━━━━━━★ RESET / BASE ★━━━━━━━━ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--vermelho), var(--vermelho-escuro));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+  /* ━━━━━━━━━★ BACKGROUND DECORATIVO ★━━━━━━━━ */
+
+.bg-shape {
+  position: fixed;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  z-index: 0;
+}
+
+.shape1 {
+  width: 300px;
+  height: 300px;
+  top: -80px;
+  left: -80px;
+}
+
+.shape2 {
+  width: 200px;
+  height: 200px;
+  bottom: 80px;
+  right: 60px;
+}
+
+.shape3 {
+  width: 120px;
+  height: 120px;
+  bottom: 220px;
+  left: 120px;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 0;
+}
+
+
+    /* ━━━━━━━━━★ LAYOUT ★━━━━━━━━ */
+
+.principal {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.lado-form {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  padding: 40px 30px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  text-align: center;
+  animation: entrada 0.8s ease forwards;
+}
+
+
+   /* ━━━━━━━━━★ TÍTULOS ★━━━━━━━━ */
+
+.titulo-topo {
+  font-family: 'Fredoka One', cursive;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--branco);
+  opacity: 0.9;
+}
+
+.titulo-login {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: var(--branco);
+}
+
+.pacman-img {
+  width: 21px;
+  margin-left: 10px;
+  vertical-align: middle;
+  animation: pacmanMove 1.5s infinite alternate ease-in-out;
+}
+
+
+   /* ━━━━━━━━━★ FORMULÁRIO ★━━━━━━━━ */
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+label {
+  font-size: 18px;
+  color: var(--branco);
+  text-align: center;
+}
+
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--azul);
+  box-shadow: 0 0 0 4px rgba(24,119,242,0.25);
+}
+
+input::placeholder {
+  text-align: center;
+  opacity: 0.8;
+}
+
+
+
+    /* ━━━━━━━━━★ BOTÃO ★━━━━━━━━ */
+
+.btn-acessar {
+  margin-top: 25px;
+  padding: 14px;
+  font-size: 20px;
+  background-color: var(--azul);
+  color: var(--branco);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-acessar:hover {
+  background-color: var(--azul-hover);
+  transform: scale(1.05);
+}
+
+.btn-acessar:active {
+  transform: scale(0.97);
+}
+
+
+   /* ━━━━━━━━━★ ANIMAÇÕES ★━━━━━━━━ */
+
+@keyframes entrada {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pacmanMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(6px);
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.6s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}

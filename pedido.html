@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lunch Aí - Produto</title>
+  <link rel="stylesheet" href="style4.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="detalhe-body">
+  <div class="carrinho-float" onclick="window.location.href='Carrinho.html'">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="carrinho-badge">0</span>
+  </div>
+
+  <section class="detalhe-container">
+    <img id="produtoImagem" alt="Produto">
+    <h2 id="produtoNome"></h2>
+
+    <p class="produto-preco">
+      R$ <span id="produtoPreco"></span>
+    </p>
+
+    <p class="produto-descricao" id="produtoDescricao"></p>
+
+    <div class="produto-info">
+      <h4>Ingredientes</h4>
+      <p id="produtoIngredientes"></p>
+
+      <h4>Informação nutricional (100g)</h4>
+      <ul id="produtoNutricional"></ul>
+    </div>
+
+    <form id="pedidoForm" class="form-pedido">
+      <label for="quantidade" style="color: white; font-weight: 600;">Quantidade</label>
+      <input type="number" id="quantidade" min="1" value="1" required>
+
+      <button type="button" class="btn-carrinho" id="btnCarrinho">
+        adicionar ao carrinho
+      </button>
+
+      <button type="submit" class="btn-azul">
+        fazer pedido
+      </button>
+    </form> 
+  </section>
+
+  <script src="script4.js"></script>
+</body>
+</html>

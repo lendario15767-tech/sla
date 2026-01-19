@@ -1,0 +1,394 @@
+/* ━━━━━━━━━★ CORES ★━━━━━━━━ */
+:root {
+  --vermelho: #e51c23;
+  --vermelho-escuro: #c4161b;
+  --azul: #1877f2;
+  --cinza-claro: #f5f5f5;
+  --cinza: #999;
+  --preto: #222;
+}
+
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.card-categoria {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card-categoria:hover {
+  transform: translateY(-6px);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+/* ━━━━━━━━━★ LOGIN ★━━━━━━━━ */
+.login-body {
+  background: #e51c23;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+.login-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-azul {
+  background: #1877f2;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* ━━━━━━━━━★ HOME ★━━━━━━━━ */
+.home-body {
+  display: flex;
+  height: 100vh;
+  
+}
+
+.menu-lateral {
+  width: 30%;
+  background: #e51c23;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.conteudo {
+  width: 70%;
+  padding: 20px;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+}
+
+.tabs .ativo {
+  border-bottom: 3px solid red;
+}
+
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 30px 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin: 20px 0;
+}
+
+.categorias img,
+.ultimos img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.cupons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.cupom {
+  flex: 1;
+  padding: 30px;
+  color: white;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.vermelho {
+  background: red;
+}
+
+.rosa {
+  background: pink;
+  color: black;
+}
+
+.ultimos {
+  display: flex;
+  gap: 20px;
+}
+
+/* ━━━━━━━━━★ AJUSTES ★━━━━━━━━ */
+
+.categorias div {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.categorias div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 30px rgba(0,0,0,0.15);
+}
+
+.categorias img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
+
+.categorias p {
+    padding: 10px;
+    font-weight: 600;
+}
+
+.cupons {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.cupom {
+    flex: 1;
+    padding: 18px;
+    border-radius: 16px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cupom.vermelho {
+    background: linear-gradient(135deg, #e41f26, #b8141a);
+}
+
+.cupom.rosa {
+    background: linear-gradient(135deg, #ff5f9e, #ff3d81);
+}
+
+.ultimos {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.ultimos div {
+    min-width: 140px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.ultimos img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+}
+
+.ultimos p {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.ultimos {
+    scroll-snap-type: x mandatory;
+}
+
+.ultimos div {
+    scroll-snap-align: start;
+}
+
+
+.tabs span {
+  cursor: pointer;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #aaa;
+}
+
+.tabs .ativo {
+  background: #ff3d3d;
+  color: white;
+}
+
+.aviso-retirada {
+  display: none;
+  background: #1f1f1f;
+  border: 1px dashed #ff3d3d;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.oculto {
+  display: none;
+}
+
+
+
+
+
+/* ━━━━━━━━━★ ANIMAÇÕES ★━━━━━━━━ */
+
+.conteudo {
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.categorias div,
+.promo-card,
+.ultimos div {
+    animation: subir 0.6s ease forwards;
+}
+
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ━━━━━━━━━★ PROMOÇÕES ★━━━━━━━━ */
+
+.promocoes {
+  display: flex;
+  gap: 25px;
+  margin: 35px 0;
+  flex-wrap: wrap;
+}
+
+.promo-elite {
+  flex: 1;
+  min-width: 300px;
+  height: 180px;
+  border-radius: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promo-elite:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 55px rgba(0,0,0,0.28);
+}
+
+/* ━━━━━━━━━★ VARIAÇÕES ★━━━━━━━━ */
+.promo-20 {
+  background: linear-gradient(135deg, #ff3c3c, #b8141a);
+}
+
+.promo-10 {
+  background: linear-gradient(135deg, #ff6aa2, #ff3d81);
+}
+
+/* ━━━━━━━━━★ TEXTO ★━━━━━━━━ */
+.promo-info {
+  color: #fff;
+  z-index: 2;
+}
+
+.promo-info h2 {
+  font-size: 34px;
+  margin: 8px 0;
+  font-weight: 700;
+}
+
+.promo-info p {
+  font-size: 15px;
+  opacity: 0.9;
+  line-height: 1.3;
+}
+
+.promo-info button {
+  margin-top: 12px;
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: #fff;
+  color: #222;
+  transition: all 0.25s ease;
+}
+
+.promo-info button:hover {
+  transform: scale(1.05);
+}
+
+/* ━━━━━━━━━★ BADGE ★━━━━━━━━ */
+.badge {
+  display: inline-block;
+  background: rgba(0,0,0,0.25);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/* ━━━━━━━━━★ IMAGEM ★━━━━━━━━ */
+.promo-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.promo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+

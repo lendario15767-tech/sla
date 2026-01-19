@@ -1,0 +1,114 @@
+
+/* ━━━━━━━━━★ INICIO ★━━━━━━━━ */
+
+
+body {
+
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #f5f5f5, #eeeeee);
+  margin: 0;
+  padding: 20px;
+}
+
+.carrinho-container {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* ━━━━━━━━━★ ITEM CARRINHO ★━━━━━━━━ */
+
+.item-carrinho {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.item-carrinho img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.item-carrinho .info {
+  flex: 1;
+}
+
+.item-carrinho p {
+  margin: 0;
+  font-weight: 600;
+  color: #222;
+}
+
+.item-carrinho span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ━━━━━━━━━★ BOTÃO REMOVER ★━━━━━━━━ */
+
+.btn-remover {
+  background: none;
+  border: none;
+  color: #e41f26;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ━━━━━━━━━★ RESUMO ★━━━━━━━━ */
+
+#resumo {
+  margin: 20px 0;
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  font-weight: 600;
+}
+
+/* ━━━━━━━━━★ BOTÃO FINALIZAR ★━━━━━━━━ */
+
+
+.btn-finalizar {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #e41f26, #ff4d4d);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(228,31,38,0.45);
+  transition: all 0.2s ease;
+}
+
+.btn-finalizar:hover {
+  transform: translateY(-2px);
+}
+
+.btn-finalizar:active {
+  transform: scale(0.97);
+}
+
+/* ━━━━━━━━━★ AJUSTES ★━━━━━━━━ */
+
+#resumo div:last-child {
+  text-align: right;
+  color: #e41f26;
+  font-size: 16px;
+}
